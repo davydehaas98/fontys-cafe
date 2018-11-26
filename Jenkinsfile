@@ -4,13 +4,6 @@ pipeline {
     disableConcurrentBuilds()
     timeout(time: 10, unit: 'MINUTES')
   }
-  triggers {
-    //cron('H 7-12 * * *')
-    gitlab(
-      triggerOnPush: true,
-      triggerOnMergeRequest: true
-    )
-  }
   stages {
     stage('Deploy') {
       steps {
