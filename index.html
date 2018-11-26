@@ -2,48 +2,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Fontys Cafe</title>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-    <style type="text/css">
-    body {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 1.5em;
-      text-align: center;
-      margin-top: 100;
-      background: #EEE;
-    }
-    </style>
+    <link rel="stylesheet" href="style.css" type="text/css">
   </head>
   <body>
     <h1>Is Fonys cafe al open?</h1>
     <h3 id="countdown"></h3>
   </body>
 </html>
-<script>
-	var end = new Date('2018-11-26T15:00:00+01:00')
-  var _second = 1000
-  var _minute = _second * 60
-  var _hour = _minute * 60
-  var _day = _hour * 24
-  var timer
-
-  function showRemaining() {
-    var now = new Date()
-    var distance = end - now
-    if (distance < 0) {
-      clearInterval(timer)
-      document.getElementById('countdown').innerHTML = 'HAHA BIER!'
-      return
-    }
-    var days = Math.floor(distance / _day)
-    var hours = Math.floor((distance % _day) / _hour)
-    var minutes = Math.floor((distance % _hour) / _minute)
-    var seconds = Math.floor((distance % _minute) / _second)
-
-    //document.getElementById('countdown').innerHTML = days + ' dagen ';
-    document.getElementById('countdown').innerHTML = hours + ' uur '
-    document.getElementById('countdown').innerHTML += minutes + ' min '
-    document.getElementById('countdown').innerHTML += seconds + ' sec'
-  }
-
-  timer = setInterval(showRemaining, 1000)
-</script>
+<script async src="index.js" />
