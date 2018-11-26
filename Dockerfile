@@ -1,7 +1,7 @@
 # Get latest nginx image 
 FROM nginx
 # Copy build into nginx image
-COPY ./dist/* /usr/share/nginx/html/
+COPY ./index.html /usr/share/nginx/html/
 # Copy nginx config file to default.conf
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 # Run server
