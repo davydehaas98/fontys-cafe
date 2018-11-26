@@ -5,6 +5,26 @@ pipeline {
     timeout(time: 10, unit: 'MINUTES')
   }
   stages {
+    stage('Verify Tools') {
+      steps {
+        parallel (
+          node: {
+            sh 'npm -v'
+          },
+          docker: {
+            sh 'docker --version'
+            sh 'which docker'
+          }
+        )
+      }
+    }
+    stage('Build') {
+      steps {
+        sh 'npm prune'
+        sh 'npm install'
+        sh 'npm run production'
+      }
+    }
     stage('Deploy') {
       steps {
         sh 'docker build -t fontys-cafe .'
