@@ -4,12 +4,12 @@ pipeline {
     disableConcurrentBuilds()
     timeout(time: 10, unit: 'MINUTES')
   }
-  triggers {
-    // bitbucket(
-    //   triggerOnPush: true,
-    //   triggerOnMergeRequest: true
-    // )
-  }
+  // triggers {
+  //   bitbucket(
+  //     triggerOnPush: true,
+  //     triggerOnMergeRequest: true
+  //   )
+  // }
   stages {
     stage('Verify Tools') {
       steps {
