@@ -5,10 +5,10 @@ pipeline {
     timeout(time: 10, unit: 'MINUTES')
   }
   triggers {
-    bitbucket(
-      triggerOnPush: true,
-      triggerOnMergeRequest: true
-    )
+    // bitbucket(
+    //   triggerOnPush: true,
+    //   triggerOnMergeRequest: true
+    // )
   }
   stages {
     stage('Verify Tools') {
