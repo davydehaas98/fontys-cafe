@@ -9,7 +9,7 @@ class App extends Component {
     this.state = {
       time: moment(),
       target: moment().set({
-        'hour': 18,
+        'hour': 15,
         'minute': 0,
         'second': 0
       })
@@ -38,7 +38,7 @@ class App extends Component {
       if (time.day() > target.day()) {
         this.setState({
           target: moment().set({
-            'hour': 18,
+            'hour': 15,
             'minute': 0,
             'second': 0
           })
