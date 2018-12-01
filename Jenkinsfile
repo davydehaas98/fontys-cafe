@@ -4,9 +4,6 @@ pipeline {
     disableConcurrentBuilds()
     timeout(time: 10, unit: 'MINUTES')
   }
-  triggers {
-    pollSCM('H/60 * * * *')
-  }
   stages {
     stage('Verify Tools') {
       steps {
