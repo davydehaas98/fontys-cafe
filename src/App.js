@@ -45,10 +45,13 @@ class App extends Component {
         })
       }
       let remaining = new Date(target - time)
+
       return (
         <div>
           <h2>
-            {remaining.getUTCHours()}:{remaining.getUTCMinutes()}:{remaining.getUTCSeconds()}
+            {String("00" + remaining.getUTCHours()).slice(-2)}:
+            {String("00" + remaining.getUTCMinutes()).slice(-2)}:
+            {String("00" + remaining.getUTCSeconds()).slice(-2)}
           </h2>
         </div>
       )
