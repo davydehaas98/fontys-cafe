@@ -48,6 +48,7 @@ class App extends Component {
 
       return (
         <div>
+        <h4>Nope, pas over:<h4>
           <h2>
             {String("00" + remaining.getUTCHours()).slice(-2)}:
             {String("00" + remaining.getUTCMinutes()).slice(-2)}:
@@ -60,7 +61,7 @@ class App extends Component {
     else {
       return (
         <div>
-          <h4>Het is tijd! De hoogste tijd!</h4>
+          <h4>Het is tijd! De hoogste tijd! Haha bier!</h4>
           <img src={image} alt="Beer!" />
         </div>
       )
