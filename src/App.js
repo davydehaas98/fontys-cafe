@@ -48,7 +48,7 @@ class App extends Component {
 
       return (
         <div>
-        <h4>Nope, pas over:<h4>
+          <h4>Nope, pas over:</h4>
           <h2>
             {String("00" + remaining.getUTCHours()).slice(-2)}:
             {String("00" + remaining.getUTCMinutes()).slice(-2)}:
