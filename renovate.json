@@ -1,5 +1,3 @@
 {
-  "extends": [
-    "config:base"
-  ]
+  "extends": ["github>davydehaas98/renovate-config:default.json"]
 }
