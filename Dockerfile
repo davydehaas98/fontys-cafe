@@ -1,5 +1,5 @@
 # Get latest nginx image 
-FROM nginx
+FROM nginx@sha256:25dfd5639707178771a975038014083a92e27c9b15523a9ff00daa3a7e445ce1
 # Copy build into nginx image
 COPY ./build /var/www
 # Copy nginx config file to default.conf
